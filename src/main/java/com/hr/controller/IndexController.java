@@ -1,6 +1,8 @@
 package com.hr.controller;
 
+import com.hr.entity.News;
 import com.hr.entity.Topic;
+import com.hr.service.NewsService;
 import com.hr.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,12 +22,17 @@ import java.util.List;
 @Controller
 public class IndexController {
 
+
     @Autowired
     private TopicService topicService;
+    @Autowired
+    private NewsService newsService;
     @GetMapping("/")
     public String Index(Model model){
         List<Topic> topics = topicService.quarryAllTopics();
+        List<News> newslist = newsService.queryAllNews();
 
+        model.addAttribute("newslist",newslist);
         model.addAttribute("topics",topics);
         return "index";
     }
