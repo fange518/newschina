@@ -57,8 +57,27 @@
     <div class="class_type"> <img src="images/class_type.gif" alt="新闻中心" /> </div>
     <div class="content">
       <ul class="class_date">
-        <li id='class_month'> <a href='#'><b> 国内 </b></a> <a href='#'><b> 国际 </b></a> <a href='#'><b> 军事 </b></a> <a href='#'><b> 体育 </b></a> <a href='#'><b> 娱乐 </b></a> <a href='#'><b> 社会 </b></a> <a href='#'><b> 财经 </b></a> <a href='#'><b> 科技 </b></a> <a href='#'><b> 健康 </b></a> <a href='#'><b> 汽车 </b></a> <a href='#'><b> 教育 </b></a> </li>
-        <li id='class_month'> <a href='#'><b> 房产 </b></a> <a href='#'><b> 家居 </b></a> <a href='#'><b> 旅游 </b></a> <a href='#'><b> 文化 </b></a> <a href='#'><b> 其他 </b></a> </li>
+        <li id='class_month'>
+            <a href='#' th:each="topic:${topics}"><b th:text="${topic.tname}"></b></a>
+            <!--<a href='#'><b> 国内 </b></a>
+            <a href='#'><b> 国际 </b></a>
+            <a href='#'><b> 军事 </b></a>
+            <a href='#'><b> 体育 </b></a>
+            <a href='#'><b> 娱乐 </b></a>
+            <a href='#'><b> 社会 </b></a>
+            <a href='#'><b> 财经 </b></a>
+            <a href='#'><b> 科技 </b></a>
+            <a href='#'><b> 健康 </b></a>
+            <a href='#'><b> 汽车 </b></a>
+            <a href='#'><b> 教育 </b></a>-->
+        <!--</li>
+        <li id='class_month'>
+            <a href='#'><b> 房产 </b></a>
+            <a href='#'><b> 家居 </b></a>
+            <a href='#'><b> 旅游 </b></a>
+            <a href='#'><b> 文化 </b></a>
+            <a href='#'><b> 其他 </b></a>-->
+        </li>
       </ul>
       <ul class="classlist">
         <li><a href='news_read.html'> 深足教练组：说我们买球是侮辱 朱广沪常暗中支招 </a><span> 2019-06-06 01:03:51.0 </span></li>
