@@ -27,5 +27,13 @@ public class NewsServiceImpl implements NewsService {
         return newsList;
     }
 
+    @Override
+    public List<News> queryNewsByTname(String tname) {
+        return newsDao.getAllNewsByTname(tname);
+    }
 
+    @Override
+    public List<News> queryNewsByTid(long tid) {
+        return newsDao.getAllByNtidOrderByNcreateDateDesc(tid);
+    }
 }

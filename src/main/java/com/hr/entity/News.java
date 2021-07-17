@@ -14,10 +14,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Data
@@ -25,13 +22,16 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 @Entity
+@Table(name = "news")
 public class News {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long nid;
-    private long ntid;
+    private Long nid;
+    private Long ntid;
+    @Column(name="ntitle")
     private String ntitle;
+    @Column(name = "ncreateDate")
     private Date ncreateDate;
     private String nauthor;
     private String ncontent;

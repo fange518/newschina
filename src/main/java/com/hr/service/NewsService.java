@@ -18,4 +18,16 @@ public interface NewsService {
 
 
     public List<News> queryAllNews();
+
+    /*
+    * 根据主题名称查询新闻
+    * */
+
+    public List<News> queryNewsByTname(String tname);
+
+    /*
+     * 根据主题tid查询新闻
+     * */
+
+    public List<News> queryNewsByTid(long tid);
 }
